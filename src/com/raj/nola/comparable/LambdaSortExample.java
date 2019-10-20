@@ -22,27 +22,30 @@ public class LambdaSortExample {
 		contestantsList.add(objd);
 		contestantsList.add(obje);
 		
+		System.out.println("Display Contestant List:"); 
 		contestantsList.forEach((s)->System.out.println(s));
 		
 	    System.out.println("Sort Contestants by Max Rep:"); 
 	      
 	    contestantsList.sort((Contestant c1, Contestant c2)->c1.getMaxRep()-c2.getMaxRep());  
-
 		contestantsList.forEach((s)->System.out.println(s));
 		
 		System.out.println("Sort Contestants by Max Weight Ascending:"); 
 		
 	    contestantsList.sort((Contestant c1, Contestant c2)->c1.getMaxWeight()-c2.getMaxWeight());  
-
 		contestantsList.forEach((s)->System.out.println(s));
 		
 		
 		System.out.println("Sort Contestants by Max Weight Descending:"); 
 		
 	    contestantsList.sort((Contestant c1, Contestant c2)->c2.getMaxWeight()-c1.getMaxWeight());  
-
 		contestantsList.forEach((s)->System.out.println(s));
-
+		
+		
+		System.out.println("Sort Contestants by Name:"); 
+		
+		contestantsList.sort((Contestant c1, Contestant c2)->c1.getContestantName().compareTo(c2.getContestantName()));
+		contestantsList.forEach((s)->System.out.println(s));
 		
 	}
 
